@@ -1,7 +1,6 @@
-
 <script lang="ts">
 import type { CartItem } from '$lib/types';
-
+	
 let { data } = $props();
 let cartOpen = $state(false);
 let cart = $state<CartItem[]>([]);
@@ -13,7 +12,7 @@ let cart = $state<CartItem[]>([]);
         {#each data.menuItems as item (item.id)}
 
         <div class="gridItem">
-			<!-- <img src={product.thumbnail} alt={product.title} class="h-48 w-full object-cover" /> -->
+			<img src={item.image} alt={item.description} class="h-48 w-full object-cover" />
 			<div class="p-4">
 				<p class="mb-2 overflow-hidden truncate text-lg font-medium text-gray-800">
 					{item.name}

@@ -12,7 +12,6 @@ export interface MenuItem {
 export interface CartItem {
     id: number;
     menuItem: MenuItem;
-    // selectedOptions: Record<string, string>;
     notes?: string;
     name?: string;
 }

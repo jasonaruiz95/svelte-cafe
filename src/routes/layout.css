@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+body {
+	font-family: 'Courier New', Courier, monospace;
+}
+
 .layoutItem h1,
 .layoutItem h2,
 .layoutItem h3 {
@@ -21,8 +25,8 @@
 
 .layoutItem {
 	padding: 2em;
-	background-color: blue;
-	color: aliceblue;
+	background-color: whitesmoke;
+	color: black;
 	text-align: center;
 
 	border-radius: 8px;
