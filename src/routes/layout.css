@@ -17,9 +17,9 @@ body {
 	grid-template-rows: auto 1fr auto;
 	/* justify-content: center; */
 	grid-template-areas:
-		'header header header'
+		'header header right-sidebar'
 		'left-sidebar main right-sidebar'
-		'footer footer footer';
+		'left-sidebar footer footer';
 	gap: 1em;
 }
 
