@@ -14,6 +14,7 @@ export interface CartItem {
     menuItem: MenuItem;
     notes?: string;
     name?: string;
+    quantity: number;
 }
 
 export interface Cart {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-
+	import Cart from '$lib/components/Cart.svelte';
 	let { children } = $props();
 </script>
 
@@ -20,7 +20,9 @@
 {@render children()}
 </section>
 <aside class="layoutItem" style="grid-area: right-sidebar">
+<Cart>
 
+</Cart>
 </aside>
 <footer class="layoutItem" style="grid-area: footer">
 	Published by Jason Ruiz 2026

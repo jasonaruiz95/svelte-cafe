@@ -4,7 +4,7 @@ import type { MenuItem } from '$lib/types';
 export function createMenuApi(fetchFn = fetch) {
     const client = createClient(fetchFn);
     return {
-        getAll: () => client.get<MenuItem[]>('/api/menu'),
+        getAll: () => client.get<MenuItem[]>('/api/Menu'),
         getById: (id: number) => client.get<MenuItem>(`/api/menu/${id}`),
         getByCategory: (category: string) => client.get<MenuItem[]>(`/api/menu/category/${category}`),
     };
