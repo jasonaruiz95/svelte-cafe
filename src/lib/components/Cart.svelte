@@ -23,7 +23,7 @@
 
         {#if $cartItems.length > 0}
             <p>Total: ${$cartTotal.toFixed(2)}</p>
-            <button onclick={clearCart}>Clear Cart</button>
+            <button onclick={() => clearCart(1)}>Clear Cart</button>
         {:else}
             <p>Your cart is empty</p>
         {/if}

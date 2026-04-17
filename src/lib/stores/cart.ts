@@ -20,6 +20,7 @@ export async function fetchCart() {
 export async function removeFromCart(cartItemId: number) {
     // cartItems.update(items => items.filter(i => i.id !== cartItemId));
     await cartApi.removeItem(cartItemId);
+    await fetchCart();
 }
 
 export async function updateQuantity(cartItemId: number, quantity: number) {
@@ -27,9 +28,19 @@ export async function updateQuantity(cartItemId: number, quantity: number) {
         items.map(i => i.id === cartItemId ? { ...i, quantity } : i)
     );
     await cartApi.updateItem(cartItemId, quantity);
+    await fetchCart();
+
 }
 
-export async function clearCart() {
-    cartItems.set([]);
-    await cartApi.clearCart();
+export async function clearCart(cartId: number) {
+    // cartItems.set([]);
+    await cartApi.clearCart(cartId);
+    await fetchCart();
+}
+
+export async function addItemToCart(menuItemId: number, quantity: number, cartId: number, notes?: string)
+{
+    // cartItems;
+    await cartApi.addItem(menuItemId, quantity,cartId, notes);
+    await fetchCart();
 }

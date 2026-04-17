@@ -1,6 +1,7 @@
 <script lang="ts">
 import type { CartItem } from '$lib/types';
-	
+import { addItemToCart } from '$lib/stores/cart';
+    
 let { data } = $props();
 let cartOpen = $state(false);
 let cart = $state<CartItem[]>([]);
@@ -22,10 +23,7 @@ let cart = $state<CartItem[]>([]);
 					<button
 						class="rounded-full bg-sky-600 px-4 py-2 text-white transition-colors duration-300 hover:bg-sky-700"
                         onclick={() => {
-                            cart.push({
-                                id: item.id,
-                                menuItem: item
-                            })
+                            addItemToCart(item.id, 1, 1)
                         }}>
 						Add to cart
 					</button>
